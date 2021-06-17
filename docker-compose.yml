@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:12
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=prisma
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-newsprism:/var/lib/postgresql/data
+
+volumes:
+  postgres-newsprism:
